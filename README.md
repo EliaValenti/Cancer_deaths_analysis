@@ -16,7 +16,7 @@ dashboard.
 
 ------------------------------------------------------------------------
 
-# Dashboard Preview
+## Dashboard Preview
 
 ### Worldwide Overview
 
@@ -67,7 +67,7 @@ age-standardized mortality rates.
 > reflect population growth and population aging as well as changes in
 > mortality.
 
-Source: [Our World in Data -- Cancer](https://ourworldindata.org/cancer)
+Source: [Our World in Data — Cancer deaths grouped, based on IHME](https://github.com/owid/owid-datasets/tree/master/datasets/Cancer%20deaths%20grouped%20-%20OWID%20based%20on%20IHME)
 
 ------------------------------------------------------------------------
 
@@ -196,9 +196,7 @@ calculated as:
 
 ``` dax
 % Change 1990-2016 =
-DIVIDE(
-    [Total Deaths 2016] - [Total Deaths 1990],
-    [Total Deaths 1990]
+DIVIDE([Total Deaths 2016] - [Total Deaths 1990],[Total Deaths 1990]
 )
 ```
 
@@ -344,9 +342,7 @@ BI dashboard.
 
 # Tools & Technologies
 
-  -----------------------------------------------------------------------
-  Tool                                Purpose
-  ----------------------------------- -----------------------------------
+  
   **Microsoft Excel**                 Initial data inspection, Pivot
                                       Tables and validation
 
@@ -360,7 +356,7 @@ BI dashboard.
 
   **Git / GitHub**                    Version control and project
                                       documentation
-  -----------------------------------------------------------------------
+
 
 ------------------------------------------------------------------------
 
@@ -438,8 +434,8 @@ To explore the project:
 # Conclusion
 
 This project combines spreadsheet analysis, data transformation,
-dimensional modeling, DAX and interactive visualization to investigate
-cancer mortality patterns between 1990 and 2016.
+dimensional modeling, DAX and interactive visualization to investigate 
+patterns in cancer deaths between 1990 and 2016.
 
 The analytical workflow moves from:
 
