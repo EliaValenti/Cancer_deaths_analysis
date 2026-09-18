@@ -195,9 +195,17 @@ For example, the global percentage change between 1990 and 2016 is
 calculated as:
 
 ``` dax
-% Change 1990-2016 =
-DIVIDE([Total Deaths 2016] - [Total Deaths 1990],[Total Deaths 1990]
-)
+
+var_%_1990_2016 = 
+
+VAR valore2016=calculate(sum('World_cancer_deaths'[Total]),
+                         year('World_cancer_deaths'[Years])= 2016)
+
+VAR valore1990=calculate(sum('World_cancer_deaths'[Total]), 
+                        year('World_cancer_deaths'[Years])= 1990)
+RETURN
+
+DIVIDE ( valore2016 - valore1990 , valore1990)
 ```
 
 The analysis shows an increase from approximately:
